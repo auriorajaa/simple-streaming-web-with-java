@@ -1,5 +1,7 @@
 # simple-streaming-web-with-java
 
+This is a simple web project using JSP, HTML, CSS, JavaScript, MySQL and Java Servlets. #CCIT-FTUI
+
 The software used to create this project is IntelliJ IDEA Ultimate Edition with GlassFish 7.0.5 server configuration and a database configuration on localhost 3307.
 Please replace the localhost 3307 configuration with the appropriate localhost configuration.
 
