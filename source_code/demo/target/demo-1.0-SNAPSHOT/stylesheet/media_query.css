@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* RESPONSIVE CODE */
+
+/* Responsive for 1200px */
+@media screen and (max-width: 1200px) {
+    :root {
+        /* Spacing */
+        --px: 80px;
+    }
+
+    /* BANNER SECTION  */
+
+    .banner {
+        margin-top: 100px;
+    }
+
+    .banner-card .card-title {
+        font-size: 2.5em;
+    }
+}
+
+/* Responsive for 1024px */
+@media screen and (max-width: 1024px) {
+    :root {
+        --px: 60px;
+    }
+
+    .banner-card .card-content {
+        bottom: 40px;
+        left: 60px;
+        right: 60px;
+    }
+}
+
+/* Responsive for 768px */
+@media screen and (max-width: 768px) {
+    :root {
+        --px: 40px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .movies {
+        margin-top: 120px;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-bar select {
+        margin-bottom: 20px;
+    }
+
+    .filter-radios {
+        width: 100%;
+    }
+}
+
+/* Responsive for 575px */
+@media screen and (max-width: 575px) {
+    :root {
+        --px: 20px;
+
+        --section-heading: 32px;
+        --fs-lg: 20px;
+    }
+}
