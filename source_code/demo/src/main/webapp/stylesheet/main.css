@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(media_query.css);
+@import url(variable.css);
+
+/* MAIN CSS */
+
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+/* REUSED STYLE */
+.banner,
+.movies {
+    padding: 0 120px;
+}
+
+/* NAVBAR */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1A1A1A;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #e50914;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #1A1A1A;
+    color: #e50914;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* NAVBAR END */
+
+/* MAIN SECTION STYLE START */
+
+.banner {
+    margin-bottom: 60px;
+}
+
+.banner-card {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.banner-img {
+    object-position: top;
+}
+
+.banner-card:hover .banner-img {
+    transform: scale(1, 1);
+}
+
+.banner-card .card-content {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    left: 80px;
+}
+
+.banner-card .card-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.banner-card .card-info div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.banner-card .card-info span {
+    font-weight: 600;
+}
+
+.banner-card .card-title {
+    font-size: 3em;
+    color: #fff;
+}
+
+/* MAIN SECTION STYLE END */
+
+
+/* SEARCH BAR STYLE */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.search-bar input[type="search"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: #999;
+}
+
+.search-bar input[type="search"]:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+.search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button i {
+    color: #999;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.search-bar button:hover i {
+    color: #fff;
+}
+
+/* MOVIES SECTION STYLE START */
+
+.movies {
+    margin-bottom: 60px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111111;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.filter-dropdowns h1 {
+    color: #e50914;
+}
+
+.filter-radios {
+    position: relative;
+    background: #E50914;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.filter-radios input {
+    display: none;
+}
+
+.filter-radios label {
+    position: relative;
+    margin: 0 10px;
+    font-size: 14px;
+    user-select: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Movies Grid Start */
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.movie-card {
+    cursor: pointer;
+}
+
+.movie-card .card-head {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.movie-card .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.movie-card:hover .card-img {
+    filter: blur(4px);
+}
+
+.movie-card .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movie-card .play-icon i {
+    font-size: 24px;
+    color: white;
+    display: none;
+}
+
+.movie-card:hover .play-icon i {
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.movie-card .card-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.movie-card:hover .card-title {
+    color: #E50914;
+}
+
+.movie-card .card-info {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.movie-card .genre {
+    margin-right: 8px;
+}
+
+
+/* Movies Grid End */
+
+/* MOVIES SECTION STYLE END */
