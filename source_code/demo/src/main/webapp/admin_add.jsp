@@ -7,12 +7,12 @@
 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<!-- Command -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Moviex: Add Movies</title>
+    <title>Moviex: Add New Movies</title>
     <link rel="stylesheet" href="stylesheet/login.css"/>
     <link rel="icon" href="assets/popcorn.png">
     <style>
