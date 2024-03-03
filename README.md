@@ -1,4 +1,4 @@
-# simple-streaming-web-with-java
+# Simple Streaming Web with Java and MySQL
 
 This repository hosts a straightforward web project employing JSP, HTML, CSS, JavaScript, MySQL, and Java Servlets for #CCIT-FTUI.
 
